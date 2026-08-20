@@ -7,24 +7,20 @@ import globals from 'globals';
 import tseslint from 'typescript-eslint';
 
 const eslintConfig = defineConfig([
-	globalIgnores(['node_modules/**', '.next/**', 'out/**', 'build/**', 'next-env.d.ts']),
-	eslint.configs.recommended,
-	tseslint.configs.recommended,
-	pluginPromise.configs['flat/recommended'],
-	reactPlugin.configs.flat.recommended,
-	reactPlugin.configs.flat['jsx-runtime'],
-	...nextVitals,
-	globalIgnores([
-		// Default ignores of eslint-config-next:
-		'.next/**',
-		'out/**',
-		'build/**',
-		'next-env.d.ts',
-	]),
+	globalIgnores(['.next/**', 'build/**', 'next-env.d.ts', 'node_modules/**', 'out/**']),
 	{
+		files: ['**/*.ts', '**/*.tsx'],
 		settings: {
 			react: { version: 'detect' },
 		},
+		extends: [
+			eslint.configs.recommended,
+			tseslint.configs.recommended,
+			pluginPromise.configs['flat/recommended'],
+			reactPlugin.configs.flat.recommended,
+			reactPlugin.configs.flat['jsx-runtime'],
+			...nextVitals,
+		],
 		languageOptions: {
 			ecmaVersion: 'latest',
 			sourceType: 'module',
