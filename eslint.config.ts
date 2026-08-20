@@ -1,5 +1,6 @@
 import eslint from '@eslint/js';
 import nextVitals from 'eslint-config-next/core-web-vitals';
+// @ts-expect-error no types available
 import pluginPromise from 'eslint-plugin-promise';
 import reactPlugin from 'eslint-plugin-react';
 import reactHooksPlugin from 'eslint-plugin-react-hooks';
