@@ -1,5 +1,8 @@
 import { getData, parseWorkshops } from './getWorkshopData';
 
+/** @see https://nextjs.org/docs/app/guides/incremental-static-regeneration#time-based-revalidation */
+export const revalidate = 3600;
+
 export async function GET() {
 	let parsedWorkshops;
 

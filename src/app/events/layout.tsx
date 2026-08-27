@@ -4,6 +4,9 @@ import { EventList, getProprietaryURL, getYearTabs } from '~/components/server';
 import { HeroLayout } from '~/layouts/HeroLayout';
 import { Typography } from '@mui/material';
 
+/** @see https://nextjs.org/docs/app/guides/incremental-static-regeneration#time-based-revalidation */
+export const revalidate = 3600;
+
 export const metadata = {
 	title: 'Events',
 };

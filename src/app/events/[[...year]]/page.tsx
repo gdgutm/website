@@ -9,6 +9,9 @@ interface EventsProps {
 	}>;
 }
 
+/** @see https://nextjs.org/docs/app/guides/incremental-static-regeneration#time-based-revalidation */
+export const revalidate = 3600;
+
 /**
  * @return Events page component using EventList
  */

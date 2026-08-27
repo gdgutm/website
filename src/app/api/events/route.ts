@@ -2,6 +2,9 @@ import ical from 'ical-generator';
 import { NextRequest } from 'next/server';
 import { getEnrichedEvents, generateChronicleFrontMatter, MIN_DATE, MAX_DATE, concatStrings } from './getEventData';
 
+/** @see https://nextjs.org/docs/app/guides/incremental-static-regeneration#time-based-revalidation */
+export const revalidate = 3600;
+
 /**
  * return an ical for the events
  */
