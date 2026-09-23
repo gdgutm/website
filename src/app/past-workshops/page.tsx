@@ -14,7 +14,7 @@ export const revalidate = 3600;
  */
 const WorkshopArchive = async () => (
 	<ResourceLayout
-		title={metadata.title}
+		text={metadata.title}
 		position="bottom"
 		picture={getProprietaryURL('heroes/wit-workshop.jpg')}
 		headerProps={{

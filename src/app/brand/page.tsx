@@ -15,7 +15,7 @@ export const metadata = {
  */
 const BrandResources = () => {
 	return (
-		<ResourceLayout id="logo-download" title={metadata.title} picture={BannerImg}>
+		<ResourceLayout id="logo-download" text={metadata.title} picture={BannerImg}>
 			<em>Last updated 2026-01-01</em>
 			<section>
 				<Typography component="h2" variant="h4">

@@ -41,7 +41,7 @@ export interface HeroHeaderProps {
 	/** max width of the header to pass to the container */
 	maxWidth?: string;
 	/** position of the image, either "top" or "bottom" */
-	position: 'top' | 'bottom';
+	position?: 'top' | 'bottom';
 	/** height of the header */
 	height?: string;
 	/** width of the header */
@@ -61,7 +61,7 @@ export const HeroHeader = ({
 	text,
 	picture,
 	maxWidth = '100%',
-	position,
+	position = 'top',
 	height = '20rem',
 	headerLevel = 'h1',
 	imgProps,

@@ -30,7 +30,7 @@ export default async function EventsLayout({ children }: Readonly<PropsWithChild
 
 	return (
 		<HeroLayout
-			title={'Events'}
+			text="Events"
 			picture={getProprietaryURL('heroes/pizza-workshop.jpg')}
 			position="bottom"
 			id="events"

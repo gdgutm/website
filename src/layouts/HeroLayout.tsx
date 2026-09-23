@@ -3,19 +3,11 @@ import type { ComponentProps, ReactNode } from 'react';
 
 import { HeroHeader, HeroHeaderProps } from '~/components/client';
 
-export interface HeroLayoutProps {
+export interface HeroLayoutProps extends Pick<HeroHeaderProps, 'text' | 'picture' | 'position' | 'height'> {
 	/** Children components */
 	children: ReactNode;
-	/** Title of the page */
-	title: HeroHeaderProps['text'];
-	/** Picture to be used as the hero header */
-	picture: HeroHeaderProps['picture'];
 	/** Container id */
 	id?: string;
-	/** Position of the hero header */
-	position?: HeroHeaderProps['position'];
-	/** Height of the hero header */
-	height?: HeroHeaderProps['height'];
 	/** Props to pass to the Hero */
 	headerProps?: Partial<HeroHeaderProps>;
 	/** Props to pass to the Container */
@@ -27,17 +19,17 @@ export interface HeroLayoutProps {
  */
 export const HeroLayout = ({
 	children,
-	title,
+	text,
 	picture,
 	id,
-	position = 'top',
+	position,
 	height,
 	headerProps,
 	containerProps,
 }: HeroLayoutProps) => {
 	return (
 		<>
-			<HeroHeader text={title} picture={picture} position={position} height={height} {...headerProps} />
+			<HeroHeader text={text} picture={picture} position={position} height={height} {...headerProps} />
 			<Container
 				sx={{
 					py: 4,
