@@ -3,7 +3,6 @@
 	"description": "GDG UofT Mississauga Website",
 	"version": "2024.11",
 	"private": true,
-	"type": "module",
 	"license": "LGPL-3.0-or-later",
 	"repository": {
 		"type": "git",
