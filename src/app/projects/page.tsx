@@ -12,7 +12,7 @@ export const metadata = {
 const ProjectPage = () => {
 	return (
 		<HeroLayout
-			title={metadata.title}
+			text={metadata.title}
 			picture={getProprietaryURL('heroes/project-banner.jpg')}
 			position="bottom"
 			id="projects"

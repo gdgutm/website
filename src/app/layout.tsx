@@ -20,7 +20,6 @@ export const metadata = {
 		'GDG is a student-led community backed by Google Developers aimed at empowering undergraduate students from all disciplines to grow their knowledge in technology, build solutions for their local communities, and connect with other members from the Google community.',
 };
 
-// TODO add skip to content button
 export default function RootLayout({ children }: Readonly<PropsWithChildren>) {
 	return (
 		<html lang="en" className={googleSans.variable}>
